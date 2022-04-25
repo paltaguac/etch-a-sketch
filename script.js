@@ -19,8 +19,9 @@ squares.forEach((gridItem) => { // Here we are adding the change of color to eve
 });
 
 const clear = document.querySelector("#clear")
-
-
+clear.addEventListener("click",function(){
+    squares.forEach(gridItem=>{gridItem.setAttribute("style","backgroundColor:none")})
+})
 
 /*function changeColor(color){
     squares.forEach(gridItem => {
