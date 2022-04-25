@@ -19,3 +19,12 @@ squares.forEach((gridItem) => { // Here we are adding the change of color to eve
 });
 
 const clear = document.querySelector("#clear")
+
+
+
+/*function changeColor(color){
+    squares.forEach(gridItem => {
+        gridItem.addEventListener("mouseenter",function(event){
+            event.target.style.backgroundColor = color;
+    });
+}*/
