@@ -17,3 +17,5 @@ squares.forEach((gridItem) => { // Here we are adding the change of color to eve
         event.target.style.backgroundColor = "black";
     })
 });
+
+const clear = document.querySelector("#clear")
