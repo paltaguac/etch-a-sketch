@@ -1,11 +1,11 @@
 const wrapper = document.querySelector(".wrapper");
-const gridContainer = document.querySelector(".gridContainer");
+const grid = document.querySelector(".grid");
 function makeRows(rows, cols) { // this function will create our grid dynamically.
-  gridContainer.style.setProperty("--grid-rows", rows);
-  gridContainer.style.setProperty("--grid-cols", cols);
+  grid.style.setProperty("--grid-rows", rows);
+  grid.style.setProperty("--grid-cols", cols);
   for (i = 0; i < rows * cols; i++) {
     let cell = document.createElement("div");
-    gridContainer.appendChild(cell).className = "gridItem";
+    grid.appendChild(cell).className = "gridItem";
   }
 }
 
