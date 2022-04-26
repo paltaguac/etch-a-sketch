@@ -33,7 +33,6 @@ body{
     gap: 8px;
 }
 button{
-    min-width: fit-content;
     width: 70px;
     padding: 8px;
     box-sizing: border-box;

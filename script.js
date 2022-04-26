@@ -25,7 +25,13 @@ clear.addEventListener("click",function(){
     squares.forEach(gridItem=>{gridItem.setAttribute("style","backgroundColor:none")})
 })//here we are adding the function to the clear button, so that on click it will go thhrough each square in the grid and change its background color.
 changeColor("black")
-const eraser = document.querySelector("#eraser") // eraser pen
+// eraser pen
+const eraser = document.querySelector("#eraser") 
 eraser.addEventListener("click",function(){
     changeColor("pink")
+})
+// black pen
+const blackPen = document.querySelector("#blackPen")
+blackPen.addEventListener("click",function(){
+    changeColor("Black")
 })
