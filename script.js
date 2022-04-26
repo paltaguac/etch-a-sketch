@@ -12,20 +12,14 @@ function makeRows(rows, cols) { // this function will create our grid dynamicall
 makeRows(16, 16); // here we are calling the function to create our grid with 16 rows and 16 columns
 const gridItem = document.querySelector(".gridItem")
 const squares = document.querySelectorAll(".gridItem")
-squares.forEach((gridItem) => { // Here we are adding the change of color to every div(square) of our grid(gridContainer)
-    gridItem.addEventListener("mouseenter",function(event){
-        event.target.style.backgroundColor = "black";
-    })
-});
-
-const clear = document.querySelector("#clear")
-clear.addEventListener("click",function(){
-    squares.forEach(gridItem=>{gridItem.setAttribute("style","backgroundColor:none")})
-})
-
-/*function changeColor(color){
+function changeColor(color){
     squares.forEach(gridItem => {
         gridItem.addEventListener("mouseenter",function(event){
             event.target.style.backgroundColor = color;
     });
-}*/
+})};
+const clear = document.querySelector("#clear")
+clear.addEventListener("click",function(){
+    squares.forEach(gridItem=>{gridItem.setAttribute("style","backgroundColor:none")})
+})
+changeColor("black")
