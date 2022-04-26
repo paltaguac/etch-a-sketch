@@ -9,7 +9,7 @@ function makeRows(rows, cols) { // this function will create our grid dynamicall
   }
 }
 
-makeRows(16, 16); // here we are calling the function to create our grid with 16 rows and 16 columns
+makeRows(32, 32); // here we are calling the function to create our grid with 16 rows and 16 columns
 
 const gridItem = document.querySelector(".gridItem")// each grid item is a square
 const squares = document.querySelectorAll(".gridItem")// selecting all of the squares inside the grid
