@@ -24,12 +24,10 @@ function resizeGrid(){
     clearGrid()
     makeGrid(size)
 }
-// The grid items are each square(div) of the grid
-const gridItem = document.querySelector(".gridItem")
 // The squares will be a selection of ALL the gridItems
-const squares = document.querySelectorAll(".gridItem")
 // Everytime the mouse enters a square(gridItem) it will change its color (background color)
 function changeColor(color){
+    squares=document.querySelectorAll(".gridItem")
     squares.forEach(gridItem => {
         gridItem.addEventListener("mouseenter",function(event){
             event.target.style.backgroundColor = color;
@@ -40,16 +38,19 @@ window.onload=changeColor(defaultColor)
 //defining the clear button
 const clear = document.querySelector("#clear")
 clear.addEventListener("click",function(){
+    squares=document.querySelectorAll(".gridItem")
     squares.forEach(gridItem=>{gridItem.setAttribute("style","backgroundColor:none")})
 })
 // eraser pen
 const eraser = document.querySelector("#eraser") 
 eraser.addEventListener("click",function(){
+    squares=document.querySelectorAll(".gridItem")
     changeColor("transparent")
 })
 // black pen
 const blackPen = document.querySelector("#blackPen")
 blackPen.addEventListener("click",function(){
+    squares=document.querySelectorAll(".gridItem")
     changeColor("Black")
 })
 // dropdown buttons for resizing.
