@@ -21,25 +21,6 @@ function resizeGrid(){
     clearGrid()
     makeGrid(size)
 }
-const dropDownBtn = document.querySelector(".dropDownBtn")
-const sizeButtons = document.querySelectorAll(".dropDownBtn")
-sizeButtons.forEach(dropDownBtn=>{
-    dropDownBtn.addEventListener("click",function(){
-        if(dropDownBtn.getAttribute("id")=="button8"){
-            size=8
-        }
-        if(dropDownBtn.getAttribute("id")=="button16"){
-            size=16
-        }
-        if(dropDownBtn.getAttribute("id")=="button32"){
-            size=32
-        }
-        if(dropDownBtn.getAttribute("id")=="button64"){
-            size=64
-        }
-        resizeGrid()
-    })
-})
 // The grid items are each square(div) of the grid
 const gridItem = document.querySelector(".gridItem")
 // The squares will be a selection of ALL the gridItems
@@ -67,4 +48,24 @@ eraser.addEventListener("click",function(){
 const blackPen = document.querySelector("#blackPen")
 blackPen.addEventListener("click",function(){
     changeColor("Black")
+})
+// dropdown buttons for resizing.
+const dropDownBtn = document.querySelector(".dropDownBtn")
+const sizeButtons = document.querySelectorAll(".dropDownBtn")
+sizeButtons.forEach(dropDownBtn=>{
+    dropDownBtn.addEventListener("click",function(){
+        if(dropDownBtn.getAttribute("id")=="button8"){
+            size=8
+        }
+        if(dropDownBtn.getAttribute("id")=="button16"){
+            size=16
+        }
+        if(dropDownBtn.getAttribute("id")=="button32"){
+            size=32
+        }
+        if(dropDownBtn.getAttribute("id")=="button64"){
+            size=64
+        }
+        resizeGrid()
+    })
 })
