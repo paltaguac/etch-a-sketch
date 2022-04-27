@@ -36,7 +36,7 @@ button{
     box-sizing: border-box;
 }
   /* Dropdown Content (Hidden by Default) */
-.dropdown-content {
+.dropdownContent {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
@@ -45,7 +45,7 @@ button{
     z-index: 1;
   }
   /* Links inside the dropdown */
-.dropdown-content button {
+.dropdownContent button {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -54,4 +54,4 @@ button{
     border: none;
   }
   /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdownContent {display: block;}
