@@ -10,7 +10,7 @@ function makeGrid(size) {
     let cell = document.createElement("div");
     grid.appendChild(cell).className = "gridItem";
     cell.addEventListener("mouseover",function(event){
-        event.target.style.backgroundColor="black"
+        event.target.style.backgroundColor=defaultColor
     })
   }
 }
