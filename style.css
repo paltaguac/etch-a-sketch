@@ -45,7 +45,7 @@ button{
     z-index: 1;
   }
   /* Buttons inside the dropdown */
-.dropdownContent button {
+.dropDownBtn {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -55,5 +55,5 @@ button{
   }
   /* Show the dropdown menu on hover */
 .dropdown:hover .dropdownContent {display: block;}
-.dropdownContent button:hover{background-color: pink;}
-.dropdownContent button:active{border: black 1px solid;}
+.dropDownBtn:hover{background-color: pink;}
+.dropDownBtn:active{border: black 1px solid;}
