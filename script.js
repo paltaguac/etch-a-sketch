@@ -1,7 +1,7 @@
 const wrapper = document.querySelector(".wrapper");
 const grid = document.querySelector(".grid");
 const defaultSize=16
-let defaultColor="white"
+let defaultColor="black"
 // FUNCTION TO CREATE OUR GRID:
 function makeGrid(size) {
   grid.style.setProperty("--grid-rows", size);
