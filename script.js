@@ -1,8 +1,7 @@
 const wrapper = document.querySelector(".wrapper");
 const grid = document.querySelector(".grid");
 const defaultSize=16
-let defaultColor="white"
-color=defaultColor
+const defaultColor="white"
 // FUNCTION TO CREATE OUR GRID:
 function makeGrid(size) {
   grid.style.setProperty("--grid-rows", size);
@@ -13,7 +12,7 @@ function makeGrid(size) {
   }
 }
 // CREATING OUR GRID, THE DEFAULT SIZE IS 16
-window.onload=makeGrid(defaultSize)
+window.onload = makeGrid(defaultSize)
 // here we add a function to clear the grid when we resize it
 function clearGrid(){
     grid.innerHTML=""
@@ -34,7 +33,7 @@ function changeColor(color){
     });
 })};
 //calling the changecolor function
-changeColor(color)
+window.onload=changeColor(defaultColor)
 //defining the clear button
 const clear = document.querySelector("#clear")
 clear.addEventListener("click",function(){
