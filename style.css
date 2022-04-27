@@ -51,7 +51,9 @@ button{
     text-decoration: none;
     display: block;
     width: 100px;
-    border: none;
+    border: none; 
   }
   /* Show the dropdown menu on hover */
 .dropdown:hover .dropdownContent {display: block;}
+.dropdownContent button:hover{background-color: pink;}
+.dropdownContent button:active{border: black 1px solid;}
