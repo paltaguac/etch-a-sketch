@@ -1,7 +1,7 @@
 const wrapper = document.querySelector(".wrapper");
 const grid = document.querySelector(".grid");
 const defaultSize=16
-const defaultColor="white"
+let defaultColor="white"
 // FUNCTION TO CREATE OUR GRID:
 function makeGrid(size) {
   grid.style.setProperty("--grid-rows", size);
@@ -48,10 +48,20 @@ eraser.addEventListener("click",function(){
     changeColor("transparent")
 })
 // black pen
+const colorWheel = document.querySelector("#colorWheel")
 const blackPen = document.querySelector("#blackPen")
+const colorContainer = document.querySelector(".colorContainer")
+colorContainer.addEventListener("click",function(){
+    colorWheel.click()
+})
+colorWheel.addEventListener("change",(e)=>{
+    color=e.target.value
+    defaultColor=e.target.value
+    changeColor(color)
+})
 blackPen.addEventListener("click",function(){
     squares=document.querySelectorAll(".gridItem")
-    changeColor("Black")
+    changeColor("black")
 })
 // dropdown buttons for resizing.
 const dropDownBtn = document.querySelector(".dropDownBtn")
