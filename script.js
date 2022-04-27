@@ -3,9 +3,8 @@ const grid = document.querySelector(".grid");
 const defaultSize=16
 let defaultColor="white"
 color=defaultColor
-size=defaultSize
 // FUNCTION TO CREATE OUR GRID:
-function makeRows(size) {
+function makeGrid(size) {
   grid.style.setProperty("--grid-rows", size);
   grid.style.setProperty("--grid-cols", size);
   for (i = 0; i < size**2; i++) {
@@ -13,8 +12,16 @@ function makeRows(size) {
     grid.appendChild(cell).className = "gridItem";
   }
 }
-// CREATING OOUT GRID, THE DEFAULT SIZE IS 16
-makeRows(size);
+// CREATING OUR GRID, THE DEFAULT SIZE IS 16
+window.onload=makeGrid(defaultSize)
+// here we add a function to clear the grid when we resize it
+function clearGrid(){
+    grid.innerHTML=""
+}
+function resizeGrid(){
+    clearGrid()
+    makeGrid(size)
+}
 // The grid items are each square(div) of the grid
 const gridItem = document.querySelector(".gridItem")
 // The squares will be a selection of ALL the gridItems
