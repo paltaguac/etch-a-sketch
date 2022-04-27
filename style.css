@@ -31,7 +31,7 @@ body{
     gap: 8px;
 }
 button{
-    width: 70px;
+    min-width: fit-content;
     padding: 8px;
     box-sizing: border-box;
 }
@@ -45,11 +45,13 @@ button{
     z-index: 1;
   }
   /* Links inside the dropdown */
-.dropdown-content a {
+.dropdown-content button {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    width: 100px;
+    border: none;
   }
   /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
