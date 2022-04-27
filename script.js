@@ -9,6 +9,9 @@ function makeGrid(size) {
   for (i = 0; i < size**2; i++) {
     let cell = document.createElement("div");
     grid.appendChild(cell).className = "gridItem";
+    cell.addEventListener("mouseover",function(event){
+        event.target.style.backgroundColor="black"
+    })
   }
 }
 // CREATING OUR GRID, THE DEFAULT SIZE IS 16
